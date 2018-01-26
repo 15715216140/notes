@@ -1,0 +1,26 @@
+git init 	创建新仓库
+git add	file1	把file1传到中转站	
+git status	检查仓库与中转站的内容
+git diff 	检查仓库与中转站的不同
+git log		输出上传日志
+
+git add file1	添加文件file1到中转区域
+git commit -m file1	同步文件file1到云端
+
+git branch	查看所有分支
+git branch branch1	建立分支branch1
+git checkout branch1	跳转到分支branch1目录
+git merge branch1	跳转到master后，然后把branch1同步
+git branch -d branch1	删除分支branch1
+
+git clone directory resport1	克隆resport1这个仓库到directoty文件夹下
+git remote -v	列出仓库的目录
+git merge origin/master master	将origin/master合并到master上
+git fetch	远程到本地
+git push origin test	本地到远程
+
+
+
+
+
+
