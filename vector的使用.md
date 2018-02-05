@@ -1,6 +1,4 @@
-参考[https://www.cnblogs.com/zsq1993/p/5929806.html](https://www.cnblogs.com/zsq1993/p/5929806.html) 原创内容详细
 
-结合自己知识，整理如下，更方便使用，**增加了要避开的坑和使用技巧**
 
 # 容器的使用
 
@@ -50,17 +48,12 @@
     
   删除
     v.erase(v.begin()+2)//删除第3个元素（v.begin()+2地址所在）；
-    v.erase(v.begin()+2，v.begin()+5)//删除第3-5个元素（v.begin()+4地址所在）及以后所有元素；
+    v.erase(v.begin()+2，v.begin()+5)//删除第3-5个元素
     v.erase(v.begin(),v.end());//清空
     v.clear() ;//清空；
     v.begin()+1//允许这样操作  
   v.pop_back() & v.erase() & v.push_back 后 v.size() 会变；
     
-    注：姑且认为中v(v.begin(),v.end()) => v(p1,p2),
-  	   p1为操作起始地址，p2为操作元素末地址+1， 类似sort（）；
-       大概就是像操作p1->p2，需要中（p1，p2+1）
-      （！！！此条仅为方便记忆，不保证说法的严谨，也欢迎大家指正)
-         
        
     如有错误，欢迎指正，如有不足，欢迎补充。
 } 

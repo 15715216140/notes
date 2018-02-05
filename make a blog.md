@@ -26,6 +26,38 @@ chmod +x shadowsocks-all.sh
 ./shadowsocks-all.sh uninstall
 ```
 
+# 登陆防护
+
+用putty进去后对VPS做一下安全防护
+
+新建一个用户test
+
+```command
+useradd test
+```
+
+
+
+修改用户密码，会提示你输入密码和重复输入密码
+
+```command
+passwd test
+```
+
+
+
+禁止root用户用户登录，修改#PermitRootLogin yes为PermitRootLogin no
+
+```command
+nano /etc/ssh/sshd_config
+```
+
+### 这样只能用test登陆，然后看切换到root;此时别人想暴力破解须知：服务器ip、用户名、用户名密码；
+
+
+
+
+
 #安装lnmp(官网最详细)
 
 [install lnmp ](https://lnmp.org/install.html)        
@@ -34,11 +66,15 @@ https://lnmp.org/install.html
 
 此过程需十几分钟到一小时不等，请耐心
 
+安装时的password of Mysql要自己记住//不输入则默认为root
+
 #安装虚拟主机 (官网最详细)	             
 
 [add host](https://lnmp.org/faq/lnmp-vhost-add-howto.html)           
 
 https://lnmp.org/faq/lnmp-vhost-add-howto.html
+
+安装时的datebase name and password of Mysql要自己记住
 
 
 
@@ -58,7 +94,9 @@ https://codex.wordpress.org/zh-cn:%E5%AE%89%E8%A3%85_WordPress
 
 1.在home/wwwroot/www.***.cn/里执行下载安装wordpress
 
-1.wordpress安装目录里的文件应移动到www.***cn
+2.wordpress安装目录里的文件应移动到www.***cn
+
+3.在wordpress里执行此命令
 
 ```command
 mv * ../
